@@ -9,7 +9,7 @@ from extensions import db
 
 @pytest.fixture
 def app():
-    app = create_app()
+    app = create_app(testing=True)
     app.config["TESTING"] = True
     app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///:memory:"
 
